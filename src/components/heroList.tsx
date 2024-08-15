@@ -59,7 +59,7 @@ function HeroList() {
       ) : (
         <Grid container spacing={2}>
           {heroes?.map((hero) => (
-            <Grid xs={3}>
+            <Grid xs={4}>
               <Card
                 sx={{ maxWidth: 345 }}
                 raised={true}
@@ -85,7 +85,8 @@ function HeroList() {
               </Card>
             </Grid>
           ))}
-          <Grid xs={2}>
+          <Grid xs={5}></Grid>
+          <Grid xs={2} sx={{ mt: "5%" }}>
             <Button onClick={handleOpen} variant="contained">
               Add Hero
             </Button>
@@ -98,6 +99,7 @@ function HeroList() {
               <AddHero onClose={handleClose} />
             </Modal>
           </Grid>
+          <Grid xs={5}></Grid>
           <Modal open={openEditHero} onClose={handleCloseEditHero}>
             <EditHero onClose={handleCloseEditHero} id={heroID} />
           </Modal>
