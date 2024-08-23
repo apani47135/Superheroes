@@ -46,3 +46,9 @@
 .form-buttons {
   margin-top: 7%;
 }
+
+.add-hero-btn {
+  position: absolute;
+  bottom: 9%;
+  right: 7%;
+}

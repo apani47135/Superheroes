@@ -51,6 +51,7 @@ function EditHero(props: MyCodeParams) {
         )
         .then(
           (response) => {
+            props.triggerDataRefresh();
             props.onClose();
           },
           (error) => {
@@ -72,6 +73,7 @@ function EditHero(props: MyCodeParams) {
         )
         .then(
           (response) => {
+            props.triggerDataRefresh();
             props.onClose();
           },
           (error) => {
@@ -190,6 +192,7 @@ interface hero {
 interface MyCodeParams {
   id: String;
   onClose: () => void;
+  triggerDataRefresh: () => void;
 }
 
 export default EditHero;

@@ -35,6 +35,7 @@ function AddHero(props: MyCodeParams) {
         .post(`${process.env.REACT_APP_API_URL_ENPOINT}/api/SuperHero`, hero)
         .then(
           (response) => {
+            props.triggerDataRefresh();
             props.onClose();
           },
           (error) => {
@@ -124,6 +125,7 @@ interface hero {
 
 interface MyCodeParams {
   onClose: () => void;
+  triggerDataRefresh: () => void;
 }
 
 export default AddHero;
